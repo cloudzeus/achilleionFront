@@ -9,9 +9,9 @@ COPY pnpm-lock.yaml ./
 COPY package*.json ./
 
 COPY . .
-RUN pnpm install
+RUN npm install
 
-RUN pnpm build
+RUN npm build
 
 ENV NODE_ENV=production
 
