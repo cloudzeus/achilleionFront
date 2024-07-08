@@ -54,7 +54,7 @@ function HomeClient({ settings, villas, reviews, pois, policies }) {
             style={{
               textShadow: "1px 1px 2px rgba(0, 0, 0, 0.8)",
             }}
-            className="mb-16 text-white text-3xl md:text-[40px] font-noto mx-2  drop-shadow-2xl leading-10"
+            className="mb-16 text-white text-3xl md:text-[40px] font-normal mx-2  drop-shadow-2xl leading-10"
             dangerouslySetInnerHTML={{
               __html: t("home:hero-text"),
             }}
@@ -68,11 +68,11 @@ function HomeClient({ settings, villas, reviews, pois, policies }) {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className="mx-6  mt-12 md:text-center md:mt-[100px] text-secondary font-semibold text-3xl md:text-[48px] font-noto uppercase">
+      <div className="flex flex-col max-w-[75%] mx-auto ">
+        <div className="mx-6  mt-12 md:text-center md:mt-[100px] text-secondary font-semibold text-3xl md:text-[48px]  uppercase">
           {settings.name}
         </div>
-        <p className=" mx-6 md:mx-[100px] md:mt-[142px] md:text-center mb-20 mt-6 leading-8 text-[16px]">
+        <p className=" mx-6 md:mx-[100px] md:mt-[100px] md:text-justify mb-20 mt-6 leading-8 text-[16px]">
           {settings.longDescription}
         </p>
       </div>
@@ -87,14 +87,14 @@ function HomeClient({ settings, villas, reviews, pois, policies }) {
           className="mb-4 ml-4"
           alt="logo"
         />
-        <div className="text-secondary text-sm md:text-[24px] font-noto">
+        <div className="text-secondary text-sm md:text-[24px] font-">
           {t("home:testimonialsTitle")}
         </div>
       </div>
       <Testimonials reviews={reviews} />
       <div className="flex items-center justify-center mt-16 md:mt-[180px]">
-        <h5 className="text-secondary text-sm md:text-[24px] font-noto">
-          {t("common:discover").toUpperCase()}
+        <h5 className="text-secondary text-sm md:text-[24px] font-normal">
+          {t("common:discover")}
         </h5>
       </div>
       <div className="flex justify-center mx-6 md:mx-0">
@@ -131,10 +131,10 @@ const PoiCard = ({ poi, isOdd }) => {
           }}
         ></div>
         <div className="absolute inset-0 flex translate-y-[260%] flex-col items-center gap-2 justify-center px-9 text-center transition-all duration-500 h-[203px]">
-          <h1 className="text-[11px] font-bold text-white uppercase">
+          <h1 className="text-[12px] font-bold text-white ">
             {poi.title.substring(0, 60) + "..."}
           </h1>
-          <h1 className="text-[11px] font-bold text-white ">
+          <h1 className="text-[12px] font-bold text-white ">
             {poi.categories.data
               .map(({ attributes: category }) => category.name)
               .join(", ")}

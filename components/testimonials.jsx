@@ -17,7 +17,7 @@ const ReviewCard = ({ review }) => {
   const unstars = Array.from({ length: MAX_STARS - review.rate }, () => 1);
 
   return (
-    <div className="max-w-lg mx-auto bg-white flex flex-col shadow-lg rounded-2xl border border-gray-100 p-[22px]">
+    <div className="max-w-lg mx-auto bg-white flex flex-col  rounded-2xl  p-[22px]">
       <div className="flex items-center mb-4">
         <Image
           src={review.imgSrc} // Replace with the actual image URL
@@ -28,7 +28,7 @@ const ReviewCard = ({ review }) => {
         />
         <div className="text-[16px] font-semibold ">{review.by}</div>
       </div>
-      <div className="text-gray-700 text-[10px] mb-4 flex-grow">
+      <div className="text-gray-700 text-[13px] mb-4 flex-grow">
         {review.testimonial}
       </div>
       <div className="flex items-center">

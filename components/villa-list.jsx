@@ -31,7 +31,7 @@ const Card = ({ villa, t }) => {
             className="w-full h-[313px] object-cover"
           />
           <div className="p-4">
-            <div className="text-sm text-black mb-2">
+            <div className="text-[16px] text-black font-black mb-2">
               <span className="text-[11px]">
                 {villa.squareMeters} {t("villas:floor-area-label")}{" "}
               </span>{" "}
@@ -40,12 +40,12 @@ const Card = ({ villa, t }) => {
                 {t("villas:sleeps-label")}{" "}
                 {villa.villa_rooms.data.reduce(
                   (a, c) => a + c.attributes.sleeps,
-                  0,
+                  0
                 )}
               </span>{" "}
               ·{" "}
-              <span className="text-[11px] uppercase">
-                ${t("villas:rooms-label")} {villa.villa_rooms.data.length}
+              <span className="text-[11px]">
+                {t("villas:rooms-label")} {villa.villa_rooms.data.length}
               </span>
             </div>
           </div>
@@ -53,7 +53,7 @@ const Card = ({ villa, t }) => {
             <BookModal />
             <Link
               href={`/villas/${villa.slug}`}
-              className="rounded-full absolute right-4 bottom-4 hover:bg-primary hover:text-white bg-[#D9D9D9] h-[92px] w-[92px] flex items-center justify-center font-com text-sm capitalize text-black"
+              className="rounded-full absolute right-4 bottom-4 hover:bg-primary hover:text-white bg-[#D9D9D9] h-[94px] w-[94px] flex items-center justify-center font-com text-[12px] capitalize text-black"
             >
               {t("villas:more-label")}
             </Link>

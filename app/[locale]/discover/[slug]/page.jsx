@@ -12,12 +12,12 @@ export default async function DiscoverPage({ params: { locale, slug } }) {
 
   // TODO: update this correct query
   const response = await fetch(
-    `${process.env.STRAPI_BASE_URL}/pois?locale=${locale}&filters[slug][$eq]=${slug}&populate[0]=categories&populate[1]=gallery`,
+    `${process.env.STRAPI_BASE_URL}/pois?locale=${locale}&filters[slug][$eq]=${slug}&populate[0]=categories&populate[1]=gallery`
   );
 
   // TODO: update this correct query
   const policiesResponse = await fetch(
-    `${process.env.STRAPI_BASE_URL}/termsandcondition?locale=${locale}&populate[0]=bocks`,
+    `${process.env.STRAPI_BASE_URL}/termsandcondition?locale=${locale}&populate[0]=bocks`
   );
 
   //TODO: error handling
@@ -59,8 +59,8 @@ export default async function DiscoverPage({ params: { locale, slug } }) {
         <section className="my-8  md:my-16 flex justify-center">
           <Map
             location={{
-              lat: poi.latitude,
-              lng: poi.longitude,
+              lat: poi.longitude,
+              lng: poi.latitude,
             }}
           />
         </section>
