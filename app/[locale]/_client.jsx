@@ -17,13 +17,13 @@ function HomeClient({ settings, villas, reviews, pois, policies }) {
 
       <div
         className="relative bg-cover bg-center h-screen flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/hero.svg')" }}
+        style={{ backgroundImage: "url('/images/heroImage.webp')" }}
       >
         <div
           className="absolute inset-0 w-full"
-          style={{
-            background: "rgba(97, 94, 94, 0.6)",
-          }}
+          // style={{
+          //   background: "rgba(97, 94, 94, 0.6)",
+          // }}
         ></div>
         <Link
           className="absolute z-20 top-0 md:top-[100px] left-0"
